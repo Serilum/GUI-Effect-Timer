@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "guieffecttimer",
+  "version": "1.0",
+
+  "name": "GUI Effect Timer",
+  "description": "Displays time remaining text inside the mob effect badge on the screen.",
+  "authors": [ "Rick South" ],
+  "contact": {
+    "homepage": "https://serilum.com/mod/gui-effect-timer",
+    "sources": "https://github.com/Serilum/GUI-Effect-Timer",
+    "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20GUI%20Effect%20Timer"
+  },
+
+  "license": "All Right Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": { "main": [ "com.natamus.guieffecttimer.ModFabric" ], "client": [ "com.natamus.guieffecttimer.ModFabricClient" ], "modmenu": [ "com.natamus.guieffecttimer.fabric.config.IntegrateModMenu" ] },
+  "mixins": [
+    "guieffecttimer.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "fabric-api": "*",
+    "minecraft": ">=26.1",
+    "java": ">=25",
+    "collective": ">=8.16"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Donate <3" : "https://serilum.com/donate"
+      }
+    }
+  },
+
+  "contributors": [
+	  " ",
+	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
+	  " ",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  " ",
+	  "Membership sponsors:",
+	  " akanealw",
+	  " Alister",
+	  " Andrean Olgo",
+	  " aternosorg",
+	  " Cherriesaurus",
+	  " MWS",
+	  " t128",
+	  " Tyler Behl",
+	  " XAgent",
+	  " ตัวตรึง พระนคร"
+  ]
+}
