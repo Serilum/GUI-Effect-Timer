@@ -23,8 +23,8 @@ import java.util.Iterator;
 public class GuiMixin {
 	@Shadow private @Final Minecraft minecraft;
 
-    @Inject(method = "renderEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;blitSprite(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIIII)V", shift = At.Shift.AFTER), locals = LocalCapture.CAPTURE_FAILSOFT)
-	private void renderEffects(GuiGraphics guiGraphics, DeltaTracker arg1, CallbackInfo ci, Collection<?> collection, int i, int j, Iterator<?> var6, MobEffectInstance mobEffectInstance, Holder<MobEffect> mobEffectHolder, int k, int l, float f) {
+    @Inject(method = "renderEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;blitSprite(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIII)V", shift = At.Shift.AFTER), locals = LocalCapture.CAPTURE_FAILSOFT)
+	private void renderEffects(GuiGraphics guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci, Collection<?> collection, int i, int j, Iterator<?> var6, MobEffectInstance mobEffectInstance, Holder<MobEffect> mobEffectHolder, int k, int l, float f) {
 		Util.addEffectTimer(guiGraphics, mobEffectInstance, k, l);
 	}
 }
