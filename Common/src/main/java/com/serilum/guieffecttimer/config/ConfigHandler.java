@@ -1,7 +1,7 @@
-package com.natamus.guieffecttimer.config;
+package com.serilum.guieffecttimer.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.guieffecttimer.util.Reference;
+import com.serilum.guieffecttimer.util.Reference;
 
 import java.util.Arrays;
 import java.util.HashMap;

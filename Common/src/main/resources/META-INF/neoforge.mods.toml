@@ -1,28 +1,28 @@
 modLoader="javafml"
 loaderVersion="*"
-license="All rights reserved"
+license="All Rights Reserved"
 issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20GUI%20Effect%20Timer"
 logoFile="icon.png"
 
 [[mods]]
 modId="guieffecttimer"
-version="1.0"
+version="1.2"
 displayName="GUI Effect Timer"
-displayURL="https://curseforge.com/minecraft/mc-mods/gui-effect-timer"
-authors="Rick South"
+displayURL="https://serilum.com/mod/gui-effect-timer"
+authors="Serilum"
 description='''Displays time remaining text inside the mob effect badge on the screen.
 '''
 credits='''Thank you very much to my Membership sponsors for supporting the development of this mod:  
 
-Alister, Andrean Olgo, aternosorg, Cherriesaurus, David Sanchez, drdog111, Michael W. S., t128, Tyler Behl, XAgent   
+Andrean Olgo, AnyankaT, aternosorg, Cherriesaurus, Linda Jansen, MWS, Tyler Behl   
 
-If you would like to contribute too, check out https://serilum.com/donate. Appreciate it! <3   
+If you would like to contribute too, check out https://serilum.com/donate Appreciate it! <3   
 '''
 
 [[dependencies.guieffecttimer]]
     modId="collective"
     type="required"
-    versionRange="[7.92,)"
+    versionRange="[8.40,)"
     ordering="NONE"
     side="BOTH"
 

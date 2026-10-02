@@ -1,6 +1,6 @@
-package com.natamus.guieffecttimer;
+package com.serilum.guieffecttimer;
 
-import com.natamus.guieffecttimer.config.ConfigHandler;
+import com.serilum.guieffecttimer.config.ConfigHandler;
 
 public class ModCommon {
 
