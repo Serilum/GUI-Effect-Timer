@@ -1,6 +1,6 @@
-package com.natamus.guieffecttimer.mixin;
+package com.serilum.guieffecttimer.mixin;
 
-import com.natamus.guieffecttimer.util.Util;
+import com.serilum.guieffecttimer.util.Util;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -25,6 +25,6 @@ public class HudMixin {
 
 	@Inject(method = "extractEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;blitSprite(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIII)V", shift = At.Shift.AFTER), locals = LocalCapture.CAPTURE_FAILSOFT)
 	private void onExtractEffects(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker, CallbackInfo ci, Collection<?> collection, int i, int j, Iterator<?> var6, MobEffectInstance mobEffectInstance, Holder<MobEffect> mobEffectHolder, int k, int l, float f) {
-	    Util.addEffectTimer(graphics, mobEffectInstance, k, l);
+		Util.addEffectTimer(graphics, mobEffectInstance, k, l);
 	}
 }

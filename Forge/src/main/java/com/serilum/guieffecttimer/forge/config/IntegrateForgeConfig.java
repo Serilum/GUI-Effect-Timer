@@ -1,7 +1,7 @@
-package com.natamus.guieffecttimer.forge.config;
+package com.serilum.guieffecttimer.forge.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.guieffecttimer.util.Reference;
+import com.serilum.guieffecttimer.util.Reference;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 
