@@ -1,8 +1,8 @@
-package com.natamus.guieffecttimer;
+package com.serilum.guieffecttimer;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.guieffecttimer.util.Reference;
+import com.serilum.guieffecttimer.util.Reference;
 import net.fabricmc.api.ModInitializer;
 
 public class ModFabric implements ModInitializer {
