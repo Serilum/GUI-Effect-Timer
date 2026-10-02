@@ -1,6 +1,6 @@
-package com.natamus.guieffecttimer.mixin;
+package com.serilum.guieffecttimer.mixin;
 
-import com.natamus.guieffecttimer.util.Util;
+import com.serilum.guieffecttimer.util.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;

@@ -1,9 +1,9 @@
-package com.natamus.guieffecttimer;
+package com.serilum.guieffecttimer;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.guieffecttimer.forge.config.IntegrateForgeConfig;
-import com.natamus.guieffecttimer.util.Reference;
+import com.serilum.guieffecttimer.forge.config.IntegrateForgeConfig;
+import com.serilum.guieffecttimer.util.Reference;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
