@@ -10,19 +10,11 @@ import java.util.List;
 public class ConfigHandler extends DuskConfig {
 	public static HashMap<String, List<String>> configMetaData = new HashMap<String, List<String>>();
 
-	@Entry(min = 0, max = 255) public static int timerColourRGB_R = 255;
-	@Entry(min = 0, max = 255) public static int timerColourRGB_G = 255;
-	@Entry(min = 0, max = 255) public static int timerColourRGB_B = 255;
+	@Entry(rgb = true) public static String timerColourRGB = "255,255,255";
 
 	public static void initConfig() {
-		configMetaData.put("timerColourRGB_R", Arrays.asList(
-			"The red RGB value for the timer text."
-		));
-		configMetaData.put("timerColourRGB_G", Arrays.asList(
-			"The green RGB value for the timer text."
-		));
-		configMetaData.put("timerColourRGB_B", Arrays.asList(
-			"The blue RGB value for the timer text."
+		configMetaData.put("timerColourRGB", Arrays.asList(
+			"The colour of the timer text, as red, green and blue values from 0 to 255."
 		));
 
 		DuskConfig.init(Reference.NAME, Reference.MOD_ID, ConfigHandler.class);
