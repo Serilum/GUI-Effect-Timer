@@ -1,5 +1,6 @@
 package com.serilum.guieffecttimer.util;
 
+import com.natamus.collective.functions.ColourFunctions;
 import com.serilum.guieffecttimer.config.ConfigHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -19,7 +20,7 @@ public class Util {
 		guiGraphics.pose().translate(-0.5F, 0.0F);
 		guiGraphics.pose().scale(scale, scale);
 
-		guiGraphics.text(font, timeText, (int)(((k + 13) / scale) - (font.width(timeText) / 2.0F)), (int)(((l + 16) / scale)), ARGB.color(255, ConfigHandler.timerColourRGB_R, ConfigHandler.timerColourRGB_G, ConfigHandler.timerColourRGB_B), true);
+		guiGraphics.text(font, timeText, (int)(((k + 13) / scale) - (font.width(timeText) / 2.0F)), (int)(((l + 16) / scale)), ARGB.color(255, ColourFunctions.getRgbColour(ConfigHandler.timerColourRGB)), true);
 
 		guiGraphics.pose().popMatrix();
 	}
