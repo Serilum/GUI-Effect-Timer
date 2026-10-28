@@ -5,11 +5,26 @@ import com.serilum.guieffecttimer.config.ConfigHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.Hud;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.ARGB;
 import net.minecraft.world.effect.MobEffectInstance;
 import org.jetbrains.annotations.NotNull;
 
 public class Util {
+	public static void addEffectTimer(GuiGraphicsExtractor guiGraphics, Minecraft minecraft, Identifier iconSprite, int iconX, int iconY) {
+		int iconOffsetInSlot = 3;
+
+		for (MobEffectInstance mobEffectInstance : minecraft.player.getActiveEffects()) {
+			if (!Hud.getMobEffectSprite(mobEffectInstance.getEffect()).equals(iconSprite)) {
+				continue;
+			}
+
+			addEffectTimer(guiGraphics, mobEffectInstance, iconX - iconOffsetInSlot, iconY - iconOffsetInSlot);
+			return;
+		}
+	}
+
 	public static void addEffectTimer(GuiGraphicsExtractor guiGraphics, MobEffectInstance mobEffectInstance, int k, int l) {
 		String timeText = getTimeText(mobEffectInstance);
 

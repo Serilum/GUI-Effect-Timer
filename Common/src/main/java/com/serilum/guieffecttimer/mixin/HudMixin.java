@@ -1,30 +1,40 @@
 package com.serilum.guieffecttimer.mixin;
 
+import com.mojang.blaze3d.pipeline.RenderPipeline;
 import com.serilum.guieffecttimer.util.Util;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.Hud;
-import net.minecraft.core.Holder;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.resources.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-
-import java.util.Collection;
-import java.util.Iterator;
 
 @Mixin(value = Hud.class, priority = 1001)
 public class HudMixin {
 	@Shadow private @Final Minecraft minecraft;
 
-	@Inject(method = "extractEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;blitSprite(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIII)V", shift = At.Shift.AFTER), locals = LocalCapture.CAPTURE_FAILSOFT)
-	private void onExtractEffects(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker, CallbackInfo ci, Collection<?> collection, int i, int j, Iterator<?> var6, MobEffectInstance mobEffectInstance, Holder<MobEffect> mobEffectHolder, int k, int l, float f) {
-		Util.addEffectTimer(graphics, mobEffectInstance, k, l);
+	@Unique private Identifier guiEffectTimer$iconSprite = null;
+	@Unique private int guiEffectTimer$iconX = 0;
+	@Unique private int guiEffectTimer$iconY = 0;
+
+	@ModifyArg(method = "extractEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;blitSprite(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIII)V"), index = 1)
+	private Identifier extractEffects_iconSprite(RenderPipeline renderPipeline, Identifier location, int x, int y, int width, int height, int color) {
+		guiEffectTimer$iconSprite = location;
+		guiEffectTimer$iconX = x;
+		guiEffectTimer$iconY = y;
+
+		return location;
+	}
+
+	@Inject(method = "extractEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;blitSprite(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIII)V", shift = At.Shift.AFTER))
+	private void onExtractEffects(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker, CallbackInfo ci) {
+		Util.addEffectTimer(graphics, this.minecraft, guiEffectTimer$iconSprite, guiEffectTimer$iconX, guiEffectTimer$iconY);
 	}
 }
