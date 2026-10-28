@@ -5,13 +5,28 @@ import com.serilum.guieffecttimer.config.ConfigHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 
 public class Util {
+	public static void addEffectTimer(GuiGraphics guiGraphics, Minecraft minecraft, Holder<MobEffect> mobEffectHolder, int slotX, int slotY) {
+		if (mobEffectHolder == null) {
+			return;
+		}
+
+		MobEffectInstance mobEffectInstance = minecraft.player.getEffect(mobEffectHolder);
+		if (mobEffectInstance == null) {
+			return;
+		}
+
+		addEffectTimer(guiGraphics, mobEffectInstance, slotX, slotY);
+	}
+
 	public static void addEffectTimer(GuiGraphics guiGraphics, MobEffectInstance mobEffectInstance, int k, int l) {
 		String timeText = getTimeText(mobEffectInstance);
 
