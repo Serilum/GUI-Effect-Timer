@@ -1,5 +1,5 @@
 <h2>GUI Effect Timer</h2>
-<p><a href="https://github.com/Serilum/GUI-Effect-Timer"><img src="https://serilum.com/assets/images/logo/gui-effect-timer.png"></a></p><h2>Download</h2>
+<p><a href="https://github.com/Serilum/GUI-Effect-Timer"><img src="https://workflow.serilum.com/web/logo/128/gui-effect-timer.png" width="100" height="100"></a></p><h2>Download</h2>
 <p>You can download GUI Effect Timer on CurseForge and Modrinth:</p><p>&nbsp;&nbsp;CurseForge: &nbsp;&nbsp;<a href="https://curseforge.com/minecraft/mc-mods/gui-effect-timer">https://curseforge.com/minecraft/mc-mods/gui-effect-timer</a><br>&nbsp;&nbsp;Modrinth: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://modrinth.com/mod/gui-effect-timer">https://modrinth.com/mod/gui-effect-timer</a></p>
 <h2>Issue Tracker</h2>
 <p>To keep a better overview of all mods, the issue tracker is located in a separate repository.<br>&nbsp;&nbsp;For issues, ideas, suggestions or anything else, please follow this link:</p>
@@ -18,7 +18,7 @@
 <p><a href="https://serilum.com/configuration-guide" target="_blank" rel="nofollow"><img src="https://cdn.serilum.com/description/badges/configuration-guide.svg" alt="Configuration guide" width="220" height="49"></a></p>
 <p>&nbsp;&nbsp;&nbsp;<span style="font-size:18px">All available config options:</span></p>
 <div class="spoiler" style="margin-left:10px;padding-left:10px">
-<p><span style="font-size:14px"><strong>timerColourRGB_R</strong></span><span style="font-size:12px;color:#8a8d91">&nbsp;&nbsp;default 255, min 0, max 255</span><br><span style="font-size:13px">The red RGB value for the timer text.</span><br><br><span style="font-size:14px"><strong>timerColourRGB_G</strong></span><span style="font-size:12px;color:#8a8d91">&nbsp;&nbsp;default 255, min 0, max 255</span><br><span style="font-size:13px">The green RGB value for the timer text.</span><br><br><span style="font-size:14px"><strong>timerColourRGB_B</strong></span><span style="font-size:12px;color:#8a8d91">&nbsp;&nbsp;default 255, min 0, max 255</span><br><span style="font-size:13px">The blue RGB value for the timer text.</span></p>
+<p><span style="font-size:14px"><strong>timerColourRGB</strong></span><span style="font-size:12px;color:#8a8d91">&nbsp;&nbsp;default "255,255,255"</span><br><span style="font-size:13px">The colour of the timer text, as red, green and blue values from 0 to 255.</span><br><br></p>
 </div>
 <h2><br><br><br><img src="https://cdn.serilum.com/description/nameplate/showcase.svg" alt="Showcase" width="838" height="64"></h2>
 <p><picture><img src="https://cdn.serilum.com/projects/gui-effect-timer/a.png" alt=""></picture><br><br></p>
